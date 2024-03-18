@@ -1,17 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>find pet</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            /* display: flex;
+           flex-direction: column; */
+            text-align: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-family: "Sofia", sans-serif;
+            font-size: 30px;
+            text-shadow: 3px 3px 3px #ababab;
+        }
+
+        #searchVal {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px;
+        }
+
+        #searcBtn {
+            padding: 20px 20px;
+            border-radius: 10px;
+            margin-left: 10px;
+            background-color: cornflowerblue;
+            box-shadow: 10px 5px 5px;
+        }
+
+        /* javascript img disply */
+        #main-img {
+            border: 2px solid yellow;
+            width: 100vw;
+        }
+
+        #main,
+        img {
+            width: 30%;
+            height: auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid black;
+            margin: 20px;
+            box-shadow: 10px 10px 10px;
+
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Image Search</h1>
-    <input type="text" placeholder="search here" id="searchVal">
-    <button id="searcBtn">search</button>
+    <div id="container">
+        <h1>Find your pet "animal"</h1>
+        <input type="text" placeholder="Search here" id="searchVal">
+        <button id="searcBtn">Search</button>
+    </div>
     <div id="main-img">
-        
+
     </div>
     <script src="./script.js"></script>
 </body>
+
 </html>

@@ -28,13 +28,16 @@ searchBtn.addEventListener("click",imgeDisplay);
 
 const accessKey = 'lo0FTTa2hv_QUrmGp2QSgNNSI-Y-Z0dOJyaMsoZwJM4';
 function imgeDisplay(){
+
+mainImg.innerHTML="";
+
 async function searchImages() {
     inputData = searchVal.value;
     const url = `https://api.unsplash.com/search/photos?query=${inputData}&client_id=${accessKey}`;
   
     const response = await fetch(url);
     const data1 = await response.json();
-    // console.log(data);
+    // console.log(data1);
 
     // let addImg="";
     // data1.data.forEach(element => {
@@ -45,10 +48,18 @@ async function searchImages() {
     // });
     // mainImg.innerHTML=addImg;
 
-    let result=data1.result;
-    console.log(result);
+    let results=data1.results;
+    results.map((results)=>{
+       const imgdiv=document.createElement("div")
+       imgdiv.classList.add("dispimg")
+       const img=document.createElement("img");
+       img.src=results.urls.small;
+
+       mainImg.appendChild(img);
+    })
+    console.log(results);
     
 }
-
+ 
 searchImages()
 }
